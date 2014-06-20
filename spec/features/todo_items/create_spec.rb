@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "Creating todo items" do
 
   let!(:todo_list) { TodoList.create(title: "Grocery list", description: "Groceries" )}
-    
+  
   def visit_todo_list(list)
     visit "/todo_lists"
     within "#todo_list_#{todo_list.id}" do
